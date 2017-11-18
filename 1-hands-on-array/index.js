@@ -1,0 +1,101 @@
+(function() {
+  'use strict';
+
+  try {
+    const tvShows = [
+      { title: 'Black Mirror', rate: '96%' },
+      { title: 'Breaking Bad', rate: '95%' },
+      { title: 'Game Of Thrones', rate: '94%' },
+      { title: 'Jessica Jones', rate: '92%' },
+      { title: 'Stranger Things', rate: '94%' },
+      { title: 'The Walking Dead', rate: '81%' }
+    ];
+
+
+    /*
+    ==================================================
+    👉 From `tvShows`, get an array of TV shows titles
+    👉    - for loop is forbidden
+    👉    - Array.prototype.forEach is forbidden
+    ==================================================
+    */
+    const upperCaseTitles = null;
+    let result = [
+      'BLACK MIRROR',
+      'BREAKING BAD',
+      'GAME OF THRONES',
+      'JESSICA JONES',
+      'STRANGER THINGS',
+      'THE WALKING DEAD'
+    ];
+    assert(_.isEqual(upperCaseTitles, result), '`upperCaseTitles` assertion failed!');
+
+
+
+    /*
+    ==========================================================================
+    👉 From `tvShows`, get an array of TV shows where rate is greater than 93%
+    👉    - for loop is forbidden
+    👉    - Array.prototype.forEach is forbidden
+    ==========================================================================
+    */
+    const greaterThan93 = null;
+    result = [
+      { title: 'Black Mirror', rate: '96%' },
+      { title: 'Breaking Bad', rate: '95%' },
+      { title: 'Game Of Thrones', rate: '94%' },
+      { title: 'Stranger Things', rate: '94%' }
+    ];
+    assert(_.isEqual(greaterThan93, result), '`greaterThan93` assertion failed!');
+
+
+
+    /*
+    ==================================================
+    👉 From `tvShows`, get the average rate percentage
+    👉    - for loop is forbidden
+    👉    - Array.prototype.forEach is forbidden
+    ==================================================
+    */
+    const averageRate = null;
+    assert(averageRate === '92%', '`averageRate` assertion failed!');
+
+
+
+    /*
+    ========================================================================
+    👉 Implement the `tvShows.sortBy` function:
+    👉    - 1st argument is object field
+    👉    - 2nd argument (optional) is sort order: 'asc' (default) or 'desc'
+    ========================================================================
+    */
+    result = [
+      { title: 'The Walking Dead', rate: '81%' },
+      { title: 'Jessica Jones', rate: '92%' },
+      { title: 'Game Of Thrones', rate: '94%' },
+      { title: 'Stranger Things', rate: '94%' },
+      { title: 'Breaking Bad', rate: '95%' },
+      { title: 'Black Mirror', rate: '96%' }
+    ];
+    const sortedByRate = tvShows.sortBy('rate');
+    assert(_.isEqual(sortedByRate, result), '`sortedByRate` assertion failed!');
+
+    result = [
+      { title: 'The Walking Dead', rate: '81%' },
+      { title: 'Stranger Things', rate: '94%' },
+      { title: 'Jessica Jones', rate: '92%' },
+      { title: 'Game Of Thrones', rate: '94%' },
+      { title: 'Breaking Bad', rate: '95%' },
+      { title: 'Black Mirror', rate: '96%' }
+    ];
+    const sortedByTitleDesc = tvShows.sortBy('title', 'desc');
+    assert(_.isEqual(sortedByTitleDesc, result), '`sortedByTitleDesc` assertion failed!');
+
+
+
+    console.log('%c 👏👏👏 All assertions passed!', 'font-size:18px;background:green;color:white');
+  }
+  catch (e) {
+    console.log(`%c 😱😱😱 ${e.message}`, 'font-size:18px;background:red;color:white');
+  }
+}());
