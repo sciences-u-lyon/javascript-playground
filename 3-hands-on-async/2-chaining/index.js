@@ -18,11 +18,11 @@
   }
 
   /*
-  ==============================================================================================
+  =============================================================================================
   👉 Implement functions above
-  👉 From `asyncGreetings` promise, apply above functions and display "!DLROW ,OLLEH" in console
+  👉 From `asyncGreetings` promise, apply above functions to display "!DLROW ,OLLEH" in console
   👉 Do not modify `asyncGreetings`
-  ==============================================================================================
+  =============================================================================================
   */
 
 }());

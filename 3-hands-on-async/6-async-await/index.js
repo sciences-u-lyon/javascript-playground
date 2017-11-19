@@ -35,10 +35,10 @@
   });
 
   /*
-  =====================================================================================
-  👉 Rewrite `addToSix` function in a new function `addToSixAA` with async / await only
-  👉 Display result (sum) of `addToSixAA` in console.log
-  =====================================================================================
+  ========================================================================
+  👉 Rewrite `addToSix` function in a new function with async / await only
+  👉 Call the new function and display result (sum) in console.log
+  ========================================================================
   */
 
   function addToThreeWithError() {
@@ -63,10 +63,10 @@
   });
 
   /*
-  ===========================================================================================================
-  👉 Rewrite `addToThreeWithError` function in a new function `addToThreeWithErrorAA` with async / await only
-  👉 Display result (sum) of `addToThreeWithErrorAA` in console.log
-  ===========================================================================================================
+  ===================================================================================
+  👉 Rewrite `addToThreeWithError` function in a new function with async / await only
+  👉 Call the new function and display result (sum) in console.log
+  ===================================================================================
   */
 
 }());
