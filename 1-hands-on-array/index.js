@@ -67,6 +67,7 @@
     👉 Implement the `tvShows.sortBy` function:
     👉    - 1st argument is object field
     👉    - 2nd argument (optional) is sort order: 'asc' (default) or 'desc'
+    👉    - `tvShows` should not be mutated
     ========================================================================
     */
     result = [
