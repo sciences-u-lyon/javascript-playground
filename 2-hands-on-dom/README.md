@@ -26,5 +26,16 @@
 - The modal should be closed on close button click
 - Code should be written in `index.js` using DOM APIs only
 
-## 3/ redux
-- TODO
+## 3/ redux (advanced)
+
+#### Implement the search feature in 1/ with redux pattern
+
+---
+
+- In this exercise, we're using ECMAScript modules: `<script type="module" src="index.js"></script>` in `index.html`
+- **We need Chrome 61+ or Firefox 54+** (with `dom.moduleScripts.enabled` activated in `about:config`)
+- Also, because module scripts are requested with CORS, we need to serve the working directory with a http server:
+  - Install `live-server`: `npm install -g live-server`
+  - Start server at `2-hands-on-dom` directory root (`assets` need to be included): `live-server`
+  - Go to `http://127.0.0.1:8080/3-redux/` (live reload is enabled)
+- Start hacking `index.js` and `reducer.js`
