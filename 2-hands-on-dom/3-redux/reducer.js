@@ -11,6 +11,6 @@ export default function(state = {
   ]
 }, action) {
   switch (action.type) {
-    /* Return new state for each action type */
+    // Return new state for each action type
   }
 };
