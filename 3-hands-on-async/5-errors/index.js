@@ -31,9 +31,6 @@
       resolve('💀💀💀');
     }, 100);
   });
-  fatalPromise.then(skulls => {
-    throw new Error(skulls)
-  });
 
   /*
   =======================================
@@ -42,5 +39,8 @@
   👉 Do not modify code above
   =======================================
   */
+  fatalPromise.then(skulls => {
+    throw new Error(skulls)
+  });
 
 }());
