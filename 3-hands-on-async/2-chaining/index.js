@@ -8,13 +8,13 @@
   });
 
   function toUpperCase(str) {
-    // Return `str` with uppercase characters only
+    return str.toUpperCase();
   }
   function reverse(str) {
-    // Return `str` in reverse order: "HELLO" -> "OLLEH"
+    return str.split('').reverse().join('');
   }
   function display(str) {
-    // Display `str` in console
+    console.log(str);
   }
 
   /*
@@ -24,5 +24,10 @@
   👉 Do not modify `asyncGreetings`
   =============================================================================================
   */
+
+  asyncGreetings
+    .then(toUpperCase)
+    .then(reverse)
+    .then(display);
 
 }());

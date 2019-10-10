@@ -40,6 +40,16 @@
   👉 Call the new function and display result (sum) in console.log
   ========================================================================
   */
+  async function addToSixAA() {
+    let sum = await respondAfter100ms(1);
+    sum += await respondAfter100ms(2);
+    sum += await respondAfter100ms(3);
+    return sum;
+  }
+
+  addToSixAA().then(sum => {
+    console.log('addToSixAA returns', sum);
+  });
 
   function addToThreeWithError() {
     let sum = 0;
@@ -68,5 +78,19 @@
   👉 Call the new function and display result (sum) in console.log
   ===================================================================================
   */
+  async function addToThreeWithErrorAA() {
+    let sum = await respondAfter100ms(1);
+    try {
+      await respondAfter100ms(-1);
+    } catch (e) {
+      console.error('Handling error:', e);
+    }
+    sum += await respondAfter100ms(2);
+    return sum;
+  }
+
+  addToThreeWithErrorAA().then(sum => {
+    console.log('addToThreeWithErrorAA returns', sum);
+  });
 
 }());

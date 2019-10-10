@@ -22,4 +22,19 @@
   ==========================================================================
   */
 
+  function asyncAddOne(number) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(number + 1);
+      }, 100);
+    });
+  }
+  asyncAddOne(1)
+    .then(asyncAddOne)
+    .then(asyncAddOne)
+    .then(asyncAddOne)
+    .then(five => {
+      console.log(five);
+    });
+
 }());

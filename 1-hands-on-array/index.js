@@ -21,7 +21,7 @@
     */
 
     /* ✍️ Write your code here */
-    const upperCaseTitles = null;
+    const upperCaseTitles = tvShows.map(tvs => tvs.title.toUpperCase());;
 
     let result = [
       'BLACK MIRROR',
@@ -45,7 +45,7 @@
     */
 
     /* ✍️ Write your code here */
-    const greaterThan93 = null;
+    const greaterThan93 = tvShows.filter(tvs => tvs.rate > 93);
 
     result = [
       { title: 'Black Mirror', rate: 96 },
@@ -67,7 +67,10 @@
     */
 
     /* ✍️ Write your code here */
-    const averageRate = null;
+    let averageRate = tvShows.reduce(
+      (averageRate, current) => averageRate += current.rate,
+      0
+    ) / tvShows.length;
 
     assert(averageRate === 92, '`averageRate` assertion failed!');
 
@@ -86,6 +89,14 @@
       const items = this.slice();
       items.sort(function(a, b) {
         /* ✍️ Write your code here */
+        const reverse = order === 'desc' ? -1 : 1;
+        if (a[property] > b[property]) {
+          return reverse * 1;
+        }
+        if (a[property] < b[property]) {
+          return reverse * -1;
+        }
+        return 0;
       });
       return items;
     };

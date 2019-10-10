@@ -13,5 +13,8 @@
   👉 Do not modify `asyncGreetings`
   ====================================================================
   */
+  asyncGreetings.then(greetings => {
+    console.log(greetings);
+  });
 
 }());

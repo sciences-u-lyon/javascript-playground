@@ -11,6 +11,19 @@ export default function(state = {
   ]
 }, action) {
   switch (action.type) {
-    // Return new state for each action type
+    case 'SEARCH':
+      const images = cloneDeep(state.images);
+      images.forEach(img => {
+        const imgKeywords = img.keywords.toUpperCase();
+        if (action.keywords.length > 2 && !imgKeywords.includes(action.keywords)) {
+          img.class = 'poster is-hidden';
+        } else {
+          img.class = 'poster';
+        }
+      });
+      return { ...state, images };
+    case 'INIT':
+    default:
+      return state;
   }
 };

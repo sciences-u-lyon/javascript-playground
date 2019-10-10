@@ -4,10 +4,18 @@ import reducer from './reducer.js';
 const store = createStore(reducer);
 store.subscribe(update);
 
-// Dispatch `INIT` action
+store.dispatch({ type: 'INIT' });
 
-// Dispatch `SEARCH` action with keywords, from search input
+const searchInput = document.querySelector('[name="search-input"]');
+searchInput.oninput = $event => {
+  const keywords = $event.target.value.toUpperCase();
+  store.dispatch({ type: 'SEARCH', keywords });
+};
 
 function update() {
-  // Implement update function: add current state (images class) to img tags
+  const imgs = document.querySelectorAll('img');
+  const state = store.getState();
+  state.images.forEach((img, index) => {
+    imgs[index].className = img.class;
+  });
 }
